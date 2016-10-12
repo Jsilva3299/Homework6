@@ -59,7 +59,7 @@ public class ImageSplitter {
 	//@param 	none
 	//@return 	none
 	//@see 		original image and image split in four
-	private static void ImageSplitter(int userIn, String f){
+	public ImageSplitter(int userIn, String f){
 
 		try 
 		{
@@ -70,6 +70,7 @@ public class ImageSplitter {
 		    
 		    int height = img.getHeight();
 		    int width = img.getWidth();
+		    
 		    if(userIn==4){
 		    	topLeftImg = img.getSubimage(0, 0, (width / 2), (height / 2));
 		    	topRightImg = img.getSubimage((width / 2), 0, (width / 2), (height / 2));
@@ -84,6 +85,7 @@ public class ImageSplitter {
 		    	frame.pack();
 		    	frame.setVisible(true);
 		    }
+		    
 		    else if(userIn==9){
 		    	topLeftImg = img.getSubimage(0, 0, (width / 2), (height / 2)); // x-y coords for top left at (0,0)
 		    	topMidImg = img.getSubimage((width/3), 0, (width/3), (height/3)); //x coord is 1/3 of the total width of img
@@ -112,6 +114,7 @@ public class ImageSplitter {
 		    	frame.setVisible(true);
 		    	
 		    }
+		    
 		    else if(userIn==16){
 		    	topLeftImg = img.getSubimage(0, 0, (width / 2), (height / 2)); // x-y coords for top left at (0,0)
 		    	topLeftMidImg = img.getSubimage((width/3), 0, (width/3), (height/3)); //x coord is 1/3 of the total width of img
@@ -156,6 +159,7 @@ public class ImageSplitter {
 		    	frame.setVisible(true);
 		    }
 		} 
+		
 		catch (IOException e) 
 		{
 		    e.printStackTrace();
